@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Hello World</title>
+</head>
+
+<body>
+	<p th:text="${message}">registered</p>
+
+	<div>
+		<table>
+			<tbody>
+				<tr>
+					<th>Name</th>
+					<td>[[${form.name}]]</td>
+				</tr>
+				<tr>
+					<th>Age</th>
+					<td>[[${form.age}]]</td>
+				</tr>
+				<tr>
+					<th>Date of birth</th>
+					<td>[[${form.birth}]]</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

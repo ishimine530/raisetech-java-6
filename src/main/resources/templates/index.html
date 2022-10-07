@@ -11,5 +11,26 @@
 	<div th:with="today=${#dates.createNow()}">
 		<span th:text="${#dates.format(today, 'yyy/MM/dd/ HH:mm')}"></span>
 	</div>
+
+	<p>会員登録</p>
+
+	<form th:action="@{/}" method="post" th:object="${form}">
+		<div>
+			<label for="name">Name</label>
+			<input type="text" th:field="*{name}">
+		</div>
+
+		<div>
+			<label for="age">Age</label>
+			<input type="number" th:field="*{age}">
+		</div>
+
+		<div>
+			<label for="birth">Date of birth</label>
+			<input type="date" th:field="*{birth}">
+		</div>
+
+		<input type="submit" value="submit">
+	</form>
 </body>
 </html>
