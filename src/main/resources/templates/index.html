@@ -7,6 +7,9 @@
 
 <body>
 	<h1 th:text="${message}">Hello World</h1>
-</body>
 
+	<div th:with="today=${#dates.createNow()}">
+		<span th:text="${#dates.format(today, 'yyy/MM/dd/ HH:mm')}"></span>
+	</div>
+</body>
 </html>
