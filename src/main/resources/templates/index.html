@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+<title>Hello World</title>
+</head>
+
+<body>
+	<h1 class="title" th:text="${message}">Hello World</h1>
+
+	<div class="todayDate" th:with="today=${#dates.createNow()}">
+		<span th:text="${#dates.format(today, 'yyy/MM/dd/ HH:mm')}"></span>
+	</div>
+
+	<div class="content">
+		<p class="sub-title">会員登録</p>
+
+		<form th:action="@{/}" method="post" th:object="${form}">
+			<div class="item">
+				<label class="label" for="name">Name</label>
+				<input class="inputs" type="text" th:field="*{name}" th:errorclass="error-field">
+				<p class="item-error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error</p>
+			</div>
+
+			<div class="item">
+				<label class="label" for="age">Age</label>
+				<input class="inputs" type="number" th:field="*{age}" th:errorclass="error-field">
+				<p class="item-error" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age error</p>
+			</div>
+
+			<div class="item">
+				<label class="label" for="birth">Date of birth</label>
+				<input class="inputs" type="date" th:field="*{birth}" th:errorclass="error-field">
+				<p class="item-error" th:if="${#fields.hasErrors('birth')}" th:errors="*{birth}">Birth error</p>
+			</div>
+
+			<div class="button-area">
+				<input type="submit" value="submit">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

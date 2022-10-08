@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/* index.html */
+.title, .todayDate{
+	text-align:center;
+	margin: 20px auto;
+	width:500px;
+}
+
+.content{
+	border: 1px solid;
+	width: 300px;
+	margin: auto;
+}
+
+.sub-title{
+	text-align:center;
+	font-size: 20px;
+	text-decoration:underline;
+}
+
+form{
+	width: 240px;
+	margin: auto;
+}
+
+.item{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.label{
+	display: block;
+	width: 200px;
+	border-left: solid 3px #e0505d;
+	padding-left: 10px;
+}
+
+.inputs{
+	margin-left: 10px;
+	width: 200px;
+}
+
+input[type="text"], input[type="number"], input[type="date"]{
+	border: solid 1px #aaa;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+.item-error{
+	margin-left: 20px;
+	color: red;
+	font-size: 10px;
+}
+
+.button-area{
+	text-align: center;
+}
+
+input[type="submit"]{
+	background: #e0505c;
+	border: none;
+	color: white;
+	font-size: 17px;
+	font-weight: bold;
+	padding: 10px 20px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+
+/* confirm.html */
+.content-text{
+	width: 300px;
+	margin: 20px auto;
+}
+
+.registered-text{
+	text-align: center;
+	font-size: 20px;
+}
+
+.registered-content{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+table {
+	border-collapse: collapse;
+}
+
+th,td {
+	padding: 5px 10px;
+}
+
+th {
+	background-color: #e0505c;
+	color: #fff;
+	font-weight: normal;
+	position: relative;
+	z-index: 10;
+}
+
+td {
+	background-color: #fff;
+	padding-left: 25px;
+}
+
+tr {
+	border-bottom: solid #fff;
+}
